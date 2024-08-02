@@ -19,7 +19,7 @@ soprano = \relative d' {
   % measure 2
   a \< ais b \! d([ e]) cis |
   % measure 3
-  \after 8 \> e4 d8 des c! \! bes |
+  \after 8 \> e4 d8 des \undo \omit Staff.AccidentalCautionary  c! \! bes |
   % measure 4
   bes4 \< b8 \! f'!4 des8 |
   % measure 5
@@ -29,22 +29,24 @@ soprano = \relative d' {
   % measure 7
   d \p \> a! bes aes([ \pp g! \>]) ges |
   % measure 8
-  f!([ es \!]) d! r8 b'!4-- ~ \pp  |
+  f!([ es \!]) d! r8 d'! 4\pp |
   % measure 9
-  b8 bes c! \< aes4 g!8 \! |
+  d!8 [(  \> c!)] bes \! r b!4-- ~ \pp |
   % measure 10
-  fis!8 \> ([g!]) a! \! r16 ^\markup \italic "hervortretend"  f \p \< fis g \! bes[( aes ~)] |
+  b8 bes c! \< aes4 g!8 \! |
   % measure 11
-  aes16 \> g! f e! \! r f! \p \< fis gis e'![( \! f8)] e!16 |
+  fis!8 \> ([g!]) a! \! r16 ^\markup \italic "hervortretend"  f \p \< fis g \! bes[( aes ~)] |
   % measure 12
-  g! [( \mf f)] d! \> g,!-. fis!-. b!-. \> r e!8 [( \p es )] aes,16 |
+  aes16 \> g! f e! \! r f! \p \< fis gis e'![( \! f8)] e!16 |
   % measure 13
-  g!8-- \> c! \! r16 f,! \pp \< f fis \! a!8[( g!16 )] ges |
+  g! [( \mf f)] d! \> g,!-. fis!-. b!-. \> r e!8 [( \p es )] aes,16 |
   % measure 14
-  ges \> f \! r e! \p f! \< fis \after 8 \! dis'4 e!8 |
+  g!8-- \> c! \! r16 f,! \pp \< f fis \! a!8[( g!16 )] ges |
   % measure 15
-  d![( \> es )] d \! r4 r16 ges,-. \pp |
+  ges \> f \! r e! \p f! \< fis \after 8 \! dis'4 e!8 |
   % measure 16
+  d![( \> es )] d \! r4 r16 ges,-. \pp |
+  % measure 17
   f!8-. \> b!-. \! r r4 d,!8 \ppp |
 
 }
@@ -54,7 +56,8 @@ sopranoLyrics = \lyricmode {
   be -- rausch -- ten Son -- nen -- wel -- ten
   daß im -- mer mil -- dre Trä -- nen
   daß im -- mer mil -- dre Trä -- nen
-  euch eu -- re Flucht ent -- gel -- ten.
+  euch eu -- re Flucht ent -- gel -- ten
+  ent -- gel -- ten.
   Seht __ die -- sen Tau -- mel
   blon -- der licht -- blau -- er Traum -- ge -- wal -- ten
   und trunk -- ner Won -- nen
@@ -90,10 +93,13 @@ alto = \relative b {
   % measure 11
   r16 ^\markup \italic "hervortretend" c! \p cis d! f[( \! es ~)] es \! d! c! b! \! r16 c \p |
   % measure 12
-  d! \< e! b'[( c!8 \! )] b!16 d![( \mf c!)] a! \> d,-. cis-. fis-. |
+  d! \< e! b'[( c!8 \! )] b!16 d![( \mf c!)] a! \> d,-. cis-. fis!-. \! |
   % measure 13
-  r16 b!8[( \p bes)] es,16 \> d!8-- g!-- r16 c! \pp |
-
+  r16 b!8[( \p bes)] es,16 \> d!8-- g!-- \! r16 c! \pp |
+  b! \< cis e!8 [( \! d!16)] des \> des c! \! r bes, \pp c! cis |
+  a'!4 \< bes8 \! a![( \> bes!)] a \! |
+  r4 aes8-- \ppp g!4-- \> c!8-- \! |
+  r4 r8 r4 b,!8 \ppp |
 
 
 
@@ -104,7 +110,11 @@ altoLyrics = \lyricmode {
   be -- rausch -- ten Son -- nen -- wel -- ten
   daß im -- mer mil -- dre Trä -- nen
   daß im -- mer mil -- dre Trä -- nen
-  euch eu -- re Flucht ent -- gel -- ten
+  euch eu -- re Flucht ent -- gel -- ten.
+  Seht __ die -- sen Tau -- mel blon -- der licht -- blau -- er Traum -- ge -- wal -- ten
+  und trunk -- ner Won -- nen son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
+  Daß nicht der sü -- ße Scha -- er in neu -- es Leid euch hül -- le
+  euch hül -- le. __
 }
 
 tenor = \relative b {
@@ -129,6 +139,22 @@ tenor = \relative b {
   d! \pp a bes aes[( g!)] ges \> |
   % measure 9
   f[( es)] d! \! r4 r8
+  % measure 10
+  r4 r8 r b'4-- ~ \pp |
+  % measure 11
+  b8 bes c! \after 4 \! aes4 \< g!8 |
+  % measure 12
+  fis8[( \> g!)] \! a! r16 f \p \< ^\markup \italic "hervortretend" fis g! \! bes[( aes~ )] |
+  % measure 13
+  aes \> g! f e! \! r f! \p \< fis gis \! e'[( f8)] e!16 |
+  % measure 14
+  g![( \p f)] d! \> g,!-. fis!-. b-. \! r e!8[( \pp es)] aes,16 |
+  % measure 15
+  g!8-- \> c!-- \! r16 f,16 \pp \< f fis a!8 [( \! g!16)] ges |
+  % measure 16
+  ges16 \> f \! r16 e! \tweak self-alignment-X #1 \pp \< f fis \! dis'4 \> e!8 \! |
+  % measure 17
+  d!4. \ppp \> ^\markup \italic "kaum hörbar" es8 \! r8 r |
 }
 
 tenorLyrics =  \lyricmode {
@@ -136,7 +162,10 @@ tenorLyrics =  \lyricmode {
   be -- rausch -- ten Son -- nen -- wel -- ten
   daß im -- mer mil -- dre Trä -- nen
   daß im -- mer mil -- dre Trä -- nen
-  euch eu -- re Flucht ent -- gel -- ten
+  euch eu -- re Flucht ent -- gel -- ten.
+  Seht __ die -- sen Tau -- mel blon -- der licht -- blau -- er Traum -- ge -- wal -- ten
+  und trunk -- ner Won -- nen son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
+  Daß nicht der sü -- ße Schau -- er in neu -- es Leid euch hül -- le. __
 }
 
 bass = \relative d {

@@ -1,5 +1,9 @@
 \version "2.24.3"
 
+\header {
+  tagline = ""
+}
+
 global = {
   \key g \major
   \time 6/8
@@ -25,7 +29,24 @@ soprano = \relative d' {
   % measure 7
   d \p \> a! bes aes([ \pp g! \>]) ges |
   % measure 8
-  f!([ es \!]) d! r8
+  f!([ es \!]) d! r8 b'!4-- ~ \pp  |
+  % measure 9
+  b8 bes c! \< aes4 g!8 \! |
+  % measure 10
+  fis!8 \> ([g!]) a! \! r16 ^\markup \italic "hervortretend"  f \p \< fis g \! bes[( aes ~)] |
+  % measure 11
+  aes16 \> g! f e! \! r f! \p \< fis gis e'![( \! f8)] e!16 |
+  % measure 12
+  g! [( \mf f)] d! \> g,!-. fis!-. b!-. \> r e!8 [( \p es )] aes,16 |
+  % measure 13
+  g!8-- \> c! \! r16 f,! \pp \< f fis \! a!8[( g!16 )] ges |
+  % measure 14
+  ges \> f \! r e! \p f! \< fis \after 8 \! dis'4 e!8 |
+  % measure 15
+  d![( \> es )] d \! r4 r16 ges,-. \pp |
+  % measure 16
+  f!8-. \> b!-. \! r r4 d,!8 \ppp |
+
 }
 
 sopranoLyrics = \lyricmode {
@@ -33,7 +54,14 @@ sopranoLyrics = \lyricmode {
   be -- rausch -- ten Son -- nen -- wel -- ten
   daß im -- mer mil -- dre Trä -- nen
   daß im -- mer mil -- dre Trä -- nen
-  euch eu -- re Flucht ent -- gel -- ten
+  euch eu -- re Flucht ent -- gel -- ten.
+  Seht __ die -- sen Tau -- mel
+  blon -- der licht -- blau -- er Traum -- ge -- wal -- ten
+  und trunk -- ner Won -- nen
+  son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
+  Daß nicht der sü -- ße Schau -- er
+  in neu -- es Leid euch hül -- le
+  euch hül -- le. __
 }
 
 alto = \relative b {
@@ -55,6 +83,19 @@ alto = \relative b {
   d! \p \> d d e!([ \pp es]) es |
   % measure 8
   a,![( c)] d! r4 r8 |
+  % measure 9
+  r8 ges4-- ~ \tweak self-alignment-X -1 \p ges8 f g! \< |
+  % measure 10
+  es4 \! d!8 \> c![( d!)] e! \! |
+  % measure 11
+  r16 ^\markup \italic "hervortretend" c! \p cis d! f[( \! es ~)] es \! d! c! b! \! r16 c \p |
+  % measure 12
+  d! \< e! b'[( c!8 \! )] b!16 d![( \mf c!)] a! \> d,-. cis-. fis-. |
+  % measure 13
+  r16 b!8[( \p bes)] es,16 \> d!8-- g!-- r16 c! \pp |
+
+
+
 
 }
 

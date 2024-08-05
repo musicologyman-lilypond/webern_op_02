@@ -4,6 +4,8 @@
   tagline = ""
 }
 
+#(set-global-staff-size 18)
+
 global = {
   \key g \major
   \time 6/8
@@ -190,6 +192,22 @@ bass = \relative d {
   d! \pp d d e![( es)] es \> |
   % measure 9
   a,![( c!)] d! \! r4 r8 |
+  % measure 10
+  r8 ges4-- ~ \pp ges8 f g |
+  % measure 11
+  es4 \< d!8 \! c![( \> d! )] e! \! |
+  % measure 12
+  r16 ^\markup \italic "hervortretend" c! \p \< cis d! \! f[( es~)] es \> d! c! b! \! r c \p |
+  % measure 13
+  d! \< e! b'![( \! c!8)] b!16 d![( c!)] a! \> d,!-. cis-. fis!-.\! |
+  % measure 14
+  r b!8[( \tweak self-alignment-X #-1 \p bes)] es,16 \> d!8-- g!-- \! r16 b! \pp |
+  % measure 15
+  b \< cis \! e!8[( d!16)] des \> des c! \! r bes, \pp c! cis |
+  % measure 16
+  \after 8. \! a'!4 \< bes8 a![( \tweak X-offset #-1.5 ^\markup \italic "verschwindend" \> bes)] aes! \! |
+  % measure 17
+  R2.
 }
 
 bassLyrics =  \lyricmode {
@@ -198,6 +216,9 @@ bassLyrics =  \lyricmode {
   daß im -- mer mil -- dre Trä -- nen
   daß im -- mer mil -- dre Trä -- nen
   euch eu -- re Flucht ent -- gel -- ten
+  Seht __ die -- sen  Tau -- mel blon -- der licht  -- blau -- er Traum -- ge -- wal -- ten
+  und  trunk -- ner Won -- nen son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
+  Daß nicht der sü -- ße Schau -- er in neu  -- es Leid euch hül -- le __
 }
 
 \score {

@@ -4,6 +4,10 @@
   tagline = ""
 }
 
+\paper {
+  annotate-spacing = ##f
+}
+
 #(set-global-staff-size 18)
 
 global = {
@@ -31,7 +35,7 @@ soprano = \relative d' {
   % measure 7
   d \p \> a! bes aes([ \pp g! \>]) ges |
   % measure 8
-  f!([ es \!]) d! r8 d'! 4\pp |
+  f!([ es \!]) d! r8 d'! 4\ppp |
   % measure 9
   d!8 [(  \> c!)] bes \! r b!4-- ~ \pp |
   % measure 10
@@ -53,25 +57,27 @@ soprano = \relative d' {
   % measure 18
   e!4 d!8 gis!4 a!8 |
   % measure 19
-  a[( ais!)] b! d! e! cis! |
+  a[( \< ais!)] b! d! \! e! cis! |
   % measure 20
-  e!4 d!8 des! c! bes! |
+  e!4 \> d!8 des! c! bes! \pp |
   % measure 21
-  bes![( b!)] c! es![( f!)] d! |
+  bes![( b!)] c! es![( \< f!)] d! \! |
   % measure 22
-  f! e! d! cis!4 d!8 |
+  \override DynamicLineSpanner.staff-padding = #3.5
+  f! \> e! d! \! cis!4 \< d!8 \! |
   % measure 23
-  \time 9/8  a'!4 d,!8 cis! b! bes! e!4 c!8 |
+  \time 9/8  a'!4 \p \> d,!8 \! cis! \< b! bes! \! e!4 \> c!8 \! |
   % measure 24
-  b! bes! a! dis!4 b!8 r a! ais! |
+  b! \pp \< bes! a! \! dis!4 \> b!8 \! r a! \tweak self-alignment-X #1 \ppp \< ais! \! |
+  \revert DynamicLineSpanner.staff-padding
   % measure 25
-  \time 6/8 fis'!4 d!8 cis!4 b!8 |
+  \time 6/8 fis'!4 d!8 \> cis!4 b!8 \! |
   % measure 26
-  r4 r8 r fis! g |
+  r4 r8 r fis! \tweak self-alignment-X #1 \ppp \< g |
   % measure 27
-  bes!4 ges!8 r f![( e!)] |
+  bes!4 \> ges!8 \! r ^\markup \italic "wie ein Hauch"  f![( \< e!)] \!|
   % measure 28
-  d!4. ^\fermata r4 r8
+  \after 4. \! d!4. \> ^\tweak Script.outside-staff-priority #400 \fermata r4 r8
   \bar "|."
 
 }
@@ -118,11 +124,11 @@ alto = \relative b {
   % measure 8
   a,![( c)] d! r4 r8 |
   % measure 9
-  r8 ges4-- ~ \tweak self-alignment-X -1 \p ges8 f g! \< |
+  r8 ges4-- ~ \tweak self-alignment-X #1 \pp ges8 f  g! \< |
   % measure 10
-  es4 \! d!8 \> c![( d!)] e! \! |
+  \after 32 \! es4 d!8 \> c![( d!)] e! \! |
   % measure 11
-  r16 ^\markup \italic "hervortretend" c! \p cis d! f[( \! es ~)] es \! d! c! b! \! r16 c \p |
+  r16 ^\markup \italic "hervortretend" c! \p \< cis d! f[( \! es ~)] es \> d! c! b! \! r16 c \p |
   % measure 12
   d! \< e! b'[( c!8 \! )] b!16 d![( \mf c!)] a! \> d,-. cis-. fis!-. \! |
   % measure 13
@@ -138,25 +144,27 @@ alto = \relative b {
   % measure 18
   c4 b8 e!4 f!8 |
   % measure 19
-  f![( fis!)] g! bes! c! a!
+  f![( \< fis!)] g! bes! \! c! a!
   % measure 20
-  a![( g!)] fis! gis! a! g! |
+  a![( \> g!)] fis! gis! a! g! \! |
   % measure 21
-  g[( gis!)] a! b![( a!)] bes! |
+  g[( gis!)] a! b![( \< a!)] bes! \! |
   % measure 22
-  aes! g! fis! a!4 f!8 |
+  aes! \> g! fis! \! a!4 \< f!8 \! |
   % measure 23
-  \time 9/8 c'!4 b!8 ais! gis! fis! gis!4 e!8 |
+  \time 9/8 c'!4 \> b!8 \! ais! \< gis! fis! \!  gis!4 \> e!8 \! |
   % measure 24
-  es! d! c! g'!4 es!8 r f! fis! |
+  es! \pp \< d! c! \! g'!4 \> es!8 \! r f! \tweak self-alignment-X #1 \ppp \< fis! \! |
   % measure 25
-  \time 6/8 bes!4 ges!8 f!4 es!8 |
+  \time 6/8 bes!4 ges!8 \> f!4 es!8 \! |
   % measure 26
-  r4 r8 r d! es! |
+  \override DynamicLineSpanner.outside-staff-padding = #0.5
+  r4 r8 r d! \tweak self-alignment-X #1 \ppp \< es! \! |
   % measure 27
-  d4 d8 r des![( c!)] |
+
+  d4 \> d8 \! r ^\markup \italic "wie ein Hauch" des![( \< c!)] \! |
   % measure 28
-  b!4. ^\fermata r4 r8
+  \after 4. \! b!4. \> ^\tweak Script.outside-staff-priority #400 \fermata r4 r8
   \bar "|."
 }
 
@@ -213,7 +221,7 @@ tenor = \relative b {
   % measure 15
   g!8-- \> c!-- \! r16 f,16 \pp \< f fis a!8 [( \! g!16)] ges |
   % measure 16
-  ges16 \> f \! r16 e! \tweak self-alignment-X #1 \pp \< f fis \! dis'4 \> e!8 \! |
+  ges16 \> f \! r16 e! \tweak self-alignment-X #1 \pp \< f! fis \! dis'4 \> e!8 \! |
   % measure 17
   d!4. \ppp \> ^\markup \italic "kaum hörbar" es8 \! r8 r |
   % measure 18
@@ -221,23 +229,23 @@ tenor = \relative b {
   % measure 19
   c!4 b8 e!4 f!8 |
   % measure 20
-  a,![( ais!)] b! d! e! cis! |
+  a,![( ais!)] b! \< d! e! cis! \! |
   % measure 21
-  e!4 d!8 des! c! bes! |
+  e!4 \> d!8 des! c! bes! \pp |
   % measure 22
-  bes![( b!)] c! es![( f!)] d! |
+  bes![( b!)] c! es![( \< f!)] d! \! |
   % measure 23
-  \time 9/8 f![( e!)] d! r4 r8 cis! b! bes! |
+  \time 9/8 f![( \> e!)] d! \! r4 r8 cis! \pp \< b! bes! \! |
   % measure 24
-  e!4 e8 b![( bes!)] a! c! bes! aes! |
+  e!4 \> e8 \! b![( \pp \< bes!)] a! \! c! \! bes! aes! \! |
   % measure 25
-  \time 6/8 d!8 d4 r8 a! b! |
+  \time 6/8 d!8 \ppp d4 r8 a! \< b! \! |
   % measure 26
-  fis'!4 d!8 cis!4 b!8 |
+  fis'!4 d!8 \> cis!4 b!8 \! |
   % measure 27
-  bes!4 bes8 r a![( gis!)] |
+  bes!4 \ppp bes8 r  ^\markup \italic "wie ein Hauch" a![( \< gis!)] \! |
   % measure 28
-  b!4. ^\fermata r4 r8
+  \after 4. \! b!4. \> ^\tweak Script.outside-staff-priority #400 ^\fermata r4 r8
   \bar "|."
 }
 
@@ -300,27 +308,27 @@ bass = \relative d {
   % measure 19
   e!4 d!8 gis!4 a!8 |
   % measure 20
-  f![( fis!)] g! bes! c! a! |
+  f![( fis!)] g! \< bes! c! a! \! |
   % measure 21
-  a![( g!)] fis! gis! a! g! |
+  a![( \> g!)] fis! gis! a! g! \pp |
   % measure 22
-  g![( gis!)] a! b![( a!)] bes! |
+  g![( gis!)] a! b![( \< a!)] bes! \! |
   % measure 23
-  \time 9/8 aes![( g!)] fis! r4 r8 bes! aes! ges! |
+  \time 9/8 aes![( \> g!)] fis! \! r4 r8 bes! \tweak self-alignment-X #1 \pp \< aes! ges! \! |
   % measure 24
-  aes!4 c,!8 es![( d!)] f! e! d! c! |
+  aes!4 \> c,!8 \! es![( \pp \< d!)] f! \! e! \> d! c! \! |
   \time 6/8
   <<
     {
       \autoBeamOff
       % measure 25
-      d8 \ppp d4 r8 f! g! |
+      d8 \ppp d4 r8 f! \< g! \! |
       % measure 26
-      bes!4 ges!8 f!4 es!8 |
+      bes!4 ges!8 \> f!4 es!8 \! |
       % measure 27
-      fes!8 e!4 f!8[( fis! gis!)] |
+      fis!8 \ppp e!4 f!8[( ^\markup \italic "wie ein Hauch" \< fis! gis!)] \! |
       % measure 28
-      d!4. ^\fermata
+      \after 4. \! d!4.\>  ^\tweak Script.outside-staff-priority #400 ^\fermata
     }
     \\
     <<
@@ -334,7 +342,7 @@ bass = \relative d {
         % measure 26
         g4 g?8 g4 g8 |
         % measure 27
-        fis!8 gis4 a!8[( bes c!)] |
+        fis!8 gis4 a!8[( _\< bes c!)] \! |
         % measure 28
         g!4.
       }
@@ -402,6 +410,11 @@ bassLyrics =  \lyricmode {
       \Voice
       \override DynamicLineSpanner.direction = #UP
       \override DynamicLineSpanner.staff-padding = #2
+    }
+    \context {
+      \Score
+      rehearsalMarkFormatter = #format-mark-box-numbers
+      \override BarNumber.Y-offset = #4
     }
   }
   \midi { \tempo 8 = 112 }

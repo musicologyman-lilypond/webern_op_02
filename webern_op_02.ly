@@ -21,7 +21,7 @@ soprano = \relative d' {
   % measure 2
   a \< ais b \! d([ e]) cis |
   % measure 3
-  \after 8 \> e4 d8 des \undo \omit Staff.AccidentalCautionary  c! \! bes |
+  \after 8 \> e4 d8 des c! \! bes |
   % measure 4
   bes4 \< b8 \! f'!4 des8 |
   % measure 5
@@ -50,6 +50,29 @@ soprano = \relative d' {
   d![( \> es )] d \! r4 r16 ges,-. \pp |
   % measure 17
   f!8-. \> b!-. \! r r4 d,!8 \ppp |
+  % measure 18
+  e!4 d!8 gis!4 a!8 |
+  % measure 19
+  a[( ais!)] b! d! e! cis! |
+  % measure 20
+  e!4 d!8 des! c! bes! |
+  % measure 21
+  bes![( b!)] c! es![( f!)] d! |
+  % measure 22
+  f! e! d! cis!4 d!8 |
+  % measure 23
+  \time 9/8  a'!4 d,!8 cis! b! bes! e!4 c!8 |
+  % measure 24
+  b! bes! a! dis!4 b!8 r a! ais! |
+  % measure 25
+  \time 6/8 fis'!4 d!8 cis!4 b!8 |
+  % measure 26
+  r4 r8 r fis! g |
+  % measure 27
+  bes!4 ges!8 r f![( e!)] |
+  % measure 28
+  d!4. ^\fermata r4 r8
+  \bar "|."
 
 }
 
@@ -67,6 +90,12 @@ sopranoLyrics = \lyricmode {
   Daß nicht der sü -- ße Schau -- er
   in neu -- es Leid euch hül -- le
   euch hül -- le. __
+  Es sei die stil -- le Trau -- er die die -- sen Früh -- ling fül -- le
+  es sei __ die stil -- le Trau -- er
+  die stil -- le Trau -- er
+  die stil -- le Trau -- er
+  die die -- sen Früh -- ling die -- sen Früh -- ling fül -- le
+  die -- sen Früh -- ling fül -- le.
 }
 
 alto = \relative b {
@@ -98,13 +127,37 @@ alto = \relative b {
   d! \< e! b'[( c!8 \! )] b!16 d![( \mf c!)] a! \> d,-. cis-. fis!-. \! |
   % measure 13
   r16 b!8[( \p bes)] es,16 \> d!8-- g!-- \! r16 c! \pp |
+  % measure 14
   b! \< cis e!8 [( \! d!16)] des \> des c! \! r bes, \pp c! cis |
+  % measure 15
   a'!4 \< bes8 \! a![( \> bes!)] a \! |
+  % measure 16
   r4 aes8-- \ppp g!4-- \> c!8-- \! |
+  % measure 17
   r4 r8 r4 b,!8 \ppp |
-
-
-
+  % measure 18
+  c4 b8 e!4 f!8 |
+  % measure 19
+  f![( fis!)] g! bes! c! a!
+  % measure 20
+  a![( g!)] fis! gis! a! g! |
+  % measure 21
+  g[( gis!)] a! b![( a!)] bes! |
+  % measure 22
+  aes! g! fis! a!4 f!8 |
+  % measure 23
+  \time 9/8 c'!4 b!8 ais! gis! fis! gis!4 e!8 |
+  % measure 24
+  es! d! c! g'!4 es!8 r f! fis! |
+  % measure 25
+  \time 6/8 bes!4 ges!8 f!4 es!8 |
+  % measure 26
+  r4 r8 r d! es! |
+  % measure 27
+  d4 d8 r des![( c!)] |
+  % measure 28
+  b!4. ^\fermata r4 r8
+  \bar "|."
 }
 
 altoLyrics = \lyricmode {
@@ -117,6 +170,12 @@ altoLyrics = \lyricmode {
   und trunk -- ner Won -- nen son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
   Daß nicht der sü -- ße Scha -- er in neu -- es Leid euch hül -- le
   euch hül -- le. __
+  Es sei die stil -- le Trau -- er die die -- sen Früh -- ling fül -- le
+  es sei __ die stil -- le Trau -- er
+  die stil -- le Trau -- er
+  die stil -- le Trau -- er
+  die die -- sen Früh -- ling die -- sen Früh -- ling fül -- le
+  die -- sen Früh -- ling fül -- le.
 }
 
 tenor = \relative b {
@@ -157,6 +216,29 @@ tenor = \relative b {
   ges16 \> f \! r16 e! \tweak self-alignment-X #1 \pp \< f fis \! dis'4 \> e!8 \! |
   % measure 17
   d!4. \ppp \> ^\markup \italic "kaum hörbar" es8 \! r8 r |
+  % measure 18
+  r4 r8 r4 b!8 \ppp |
+  % measure 19
+  c!4 b8 e!4 f!8 |
+  % measure 20
+  a,![( ais!)] b! d! e! cis! |
+  % measure 21
+  e!4 d!8 des! c! bes! |
+  % measure 22
+  bes![( b!)] c! es![( f!)] d! |
+  % measure 23
+  \time 9/8 f![( e!)] d! r4 r8 cis! b! bes! |
+  % measure 24
+  e!4 e8 b![( bes!)] a! c! bes! aes! |
+  % measure 25
+  \time 6/8 d!8 d4 r8 a! b! |
+  % measure 26
+  fis'!4 d!8 cis!4 b!8 |
+  % measure 27
+  bes!4 bes8 r a![( gis!)] |
+  % measure 28
+  b!4. ^\fermata r4 r8
+  \bar "|."
 }
 
 tenorLyrics =  \lyricmode {
@@ -168,6 +250,11 @@ tenorLyrics =  \lyricmode {
   Seht __ die -- sen Tau -- mel blon -- der licht -- blau -- er Traum -- ge -- wal -- ten
   und trunk -- ner Won -- nen son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
   Daß nicht der sü -- ße Schau -- er in neu -- es Leid euch hül -- le. __
+  Es sei die stil -- le Trau -- er die die -- sen Früh -- ling fül -- le
+  es sei __ die stil -- le Trau -- er
+  die die -- sen Früh -- ling fül -- le
+  die die -- sen  Früh -- ling
+  die -- sen Früh -- ling die -- sen Früh -- ling fül -- le.
 }
 
 bass = \relative d {
@@ -208,6 +295,58 @@ bass = \relative d {
   \after 8. \! a'!4 \< bes8 a![( \tweak X-offset #-1.5 ^\markup \italic "verschwindend" \> bes)] aes! \! |
   % measure 17
   R2.
+  % measure 18
+  r4 r8 r4 d,!8 \ppp |
+  % measure 19
+  e!4 d!8 gis!4 a!8 |
+  % measure 20
+  f![( fis!)] g! bes! c! a! |
+  % measure 21
+  a![( g!)] fis! gis! a! g! |
+  % measure 22
+  g![( gis!)] a! b![( a!)] bes! |
+  % measure 23
+  \time 9/8 aes![( g!)] fis! r4 r8 bes! aes! ges! |
+  % measure 24
+  aes!4 c,!8 es![( d!)] f! e! d! c! |
+  \time 6/8
+  <<
+    {
+      \autoBeamOff
+      % measure 25
+      d8 \ppp d4 r8 f! g! |
+      % measure 26
+      bes!4 ges!8 f!4 es!8 |
+      % measure 27
+      fes!8 e!4 f!8[( fis! gis!)] |
+      % measure 28
+      d!4. ^\fermata
+    }
+    \\
+    <<
+      \new Voice = "lowerBass" {
+        \autoBeamOff
+        \voiceTwo
+        % measure 25
+        \once \override TextScript.self-alignment-X = #1
+        \once \override TextScript.extra-offset = #'(-1.5 . 2)
+        g,8  _\markup "(geteilt)" g4 r8 g g |
+        % measure 26
+        g4 g?8 g4 g8 |
+        % measure 27
+        fis!8 gis4 a!8[( bes c!)] |
+        % measure 28
+        g!4.
+      }
+      \new Lyrics \lyricsto "lowerBass" {
+        Früh -- ling
+        die -- sen Früh -- ling die -- sen Früh -- ling fül -- le.
+      }
+    >>
+  >>
+  r4 r8
+  \bar "|."
+
 }
 
 bassLyrics =  \lyricmode {
@@ -219,6 +358,11 @@ bassLyrics =  \lyricmode {
   Seht __ die -- sen  Tau -- mel blon -- der licht  -- blau -- er Traum -- ge -- wal -- ten
   und  trunk -- ner Won -- nen son -- der Ver -- zü -- ckung sich __ ent -- fal -- ten.
   Daß nicht der sü -- ße Schau -- er in neu  -- es Leid euch hül -- le __
+  Es sei die stil -- le Trau -- er die die -- sen Früh -- ling fül -- le
+  es sei __ die stil -- le Trau -- er
+  die die -- sen Früh -- ling fül -- le
+  die die -- sen %Früh -- ling
+  %die -- sen Früh -- ling die -- sen Früh -- ling fül -- le.
 }
 
 \score {
@@ -247,7 +391,8 @@ bassLyrics =  \lyricmode {
     \new Staff \with {
       instrumentName = "Bass."
       midiInstrument = "synth voice"
-    } <<
+    }
+    <<
       \new Voice = "bass" \bass
       \new Lyrics \lyricsto "bass" \bassLyrics
     >>
